@@ -1,0 +1,39 @@
+
+body{
+    width: 100%;
+    margin: auto;
+}
+nav{
+    height: 50px;
+    background-color: rgb(0, 48, 98);
+    display: flex;
+    color: white;
+    position: relative;
+    bottom: 0;
+}
+.icon{
+    position: relative;
+    left: 80%;
+}
+.icon-two{
+    height: 20px;
+    width: 20px;
+    border: solid;
+    position: relative;
+    top: 12px;
+    left: 70%;
+}
+.ri-english-input{
+    position: relative;
+    left: 2px;
+    bottom: 15px;
+}
+h2{
+    position: relative;
+  bottom: 10px;
+  left: 5%;
+}
+.bi-search{
+    color: rgb(55, 243, 86);
+    font-size: 20px;
+}
