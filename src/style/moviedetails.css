@@ -1,3 +1,9 @@
+.main-serach-filter-container{
+    max-height: 415px;
+    
+    overflow: hidden;
+}
+
 .movie-background-container{
     color: white;
     height: 500px;
@@ -62,6 +68,7 @@
     width: 100%;
 }
 .icon-container{
+    font-size: 13px;
     height: 40px;
     width: 40px;
     background-color: rgb(15, 15, 109);
@@ -70,23 +77,23 @@
    align-items: center;
    justify-content: center;
    margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    
 }
-.icon-container .fav{
-    
-    position: relative;
-    top: 28%;
-    left: 27%;
-}
+
 .icon-row{
-    width: 40%;
+    width: 50%;
     display: flex;
     overflow-x: hidden;
 }
 .icon-row h3{
-    font-size: 16px;
+    position: relative;
+    left: 2%;
+    font-size: 14px;
     width: 10%;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .movie-container::-webkit-scrollbar{
@@ -105,6 +112,11 @@
 }
 .team-info div p{
     margin-top: 0;
-    font-size: 14px;
-    
+    font-size: 14px;   
+}
+.cast-type{
+    padding-top: 10px;
+    padding-left: 11%;
+    font-size: 20px;
+    font-weight: 600;
 }

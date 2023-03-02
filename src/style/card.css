@@ -34,3 +34,9 @@
     text-decoration: none;
     color: black;
 }
+.CircularProgressbar-text{
+    position: relative;
+    right: 23px;
+    font-size: 30px;
+    background-color: antiquewhite;
+}

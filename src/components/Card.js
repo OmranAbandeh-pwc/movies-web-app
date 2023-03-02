@@ -1,5 +1,6 @@
 import "../style/card.css"
 import {CircularProgressbar, buildStyles} from  "react-circular-progressbar"
+import CircularProgressWidget from "../widgets/CircularProgressWidget"
 import { Link } from "react-router-dom";
 
 const Card = ({items}) => {
@@ -12,19 +13,7 @@ const Card = ({items}) => {
       </div>
       <div className="circular-progressbar">
       <div className="w-10 absolute top-[13rem] left-2">
-        <CircularProgressbar
-          value={(Number(item.vote_average * 10))}
-          text={`${item.vote_average * 10}%`}
-          background
-          backgroundPadding={3}
-          styles={buildStyles({
-            backgroundColor: "rgba(0,0,0,0.9)",
-            textSize: '2rem',
-            textColor: "white",
-            pathColor: "red",
-            trailColor: "transparent"
-          })}
-        />
+        <CircularProgressWidget height={38} width={38} percentage={~~(item.vote_average * 10) }/>
       </div>
       </div>
       <div className="info">

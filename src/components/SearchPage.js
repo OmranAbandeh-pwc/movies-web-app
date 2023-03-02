@@ -9,22 +9,23 @@ const SearchPage = () => {
   const [searchedMovies, setSearchedMovies] = useState([])
   const {query} = useParams()
 
-  //---------------------------------------------
-
-
-  //---------------------------------------------
 
   useEffect(() => {
     const getMovies = async () => {
      
       const moviesFormer = await fetchSearchedApi()
       setSearchedMovies(moviesFormer.results)
+      console.log(moviesFormer)
+      
       
     }
     getMovies()   
+    
 
   }, [])
+
   
+
   const requestOptions = {
     method: 'GET',
     redirect: 'follow'

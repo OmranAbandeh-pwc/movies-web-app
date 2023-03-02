@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 import NavBar from './NavBar';
 import "../style/searchbarstyle.css"
 import Selector from "./Selector"
-import SearchBarFilter from './SearchBarFilter';
 
 
 const Body = () => {
@@ -65,10 +64,11 @@ const Body = () => {
   getMovies() 
  }
 
+
   return (
     <>
     <NavBar/>
-   {isLoading ?"" :  
+   { 
    <div className="main-searchbar-container" style={{backgroundAttachment:"fixed",backgroundSize:"cover", backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)) , url(https://image.tmdb.org/t/p/w500/9Rq14Eyrf7Tu1xk0Pl7VcNbNh1n.jpg)`}}>
         <div className="welcome-container">
           

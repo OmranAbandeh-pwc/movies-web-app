@@ -33,7 +33,13 @@ h2{
   bottom: 10px;
   left: 5%;
 }
-.bi-search{
+.nav-bar-search{
+    
     color: rgb(55, 243, 86);
+    font-weight: 900;
     font-size: 20px;
+}
+.nav-bar-close{
+    font-size: 20px;
+    color: red;
 }
