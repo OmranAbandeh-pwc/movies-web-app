@@ -5,9 +5,10 @@ import "../style/searchpage.css"
 import SearchBarFilter from "./SearchBarFilter"
 
 const SearchPage = () => {
-
+  const [pageNumber, setPageNumber] = useState(1)
   const [searchedMovies, setSearchedMovies] = useState([])
   const {query} = useParams()
+  const [totalPages, setTotalPages] =useState(1)
 
 
   useEffect(() => {
@@ -15,14 +16,13 @@ const SearchPage = () => {
      
       const moviesFormer = await fetchSearchedApi()
       setSearchedMovies(moviesFormer.results)
+      setTotalPages(moviesFormer.total_pages)
       console.log(moviesFormer)
-      
       
     }
     getMovies()   
-    
-
-  }, [])
+  
+  }, [pageNumber])
 
   
 
@@ -31,11 +31,27 @@ const SearchPage = () => {
     redirect: 'follow'
   };
   const fetchSearchedApi = async () => {
-    const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=8d93590a0dee93ef264a94b3755603f8`, requestOptions)
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&page=${pageNumber}&api_key=8d93590a0dee93ef264a94b3755603f8`, requestOptions)
     const data = await response.json()
     return data;
   }
   
+  const moveToNextPage = () => {
+    if(pageNumber === totalPages){
+      alert("hi")
+    }else{
+       setPageNumber(pageNumber + 1)
+    }
+}
+
+const moveToPrePage = () => {
+  if(pageNumber === 1){
+    alert("hi")
+  }else{
+     setPageNumber(pageNumber - 1)
+  }
+}
+
 
   return (
     <>
@@ -59,6 +75,12 @@ const SearchPage = () => {
         </div>
       </div></Link>))}
   
+    </div>
+    
+    <div className='page-numbers-container'>
+      <button onClick={moveToPrePage}>{"<<"}</button>
+      <span>{pageNumber}</span>
+        <button onClick={moveToNextPage}>{">>"}</button>
     </div>
     </>
   )
