@@ -18,13 +18,10 @@ const SearchPage = () => {
       setSearchedMovies(moviesFormer.results)
       setTotalPages(moviesFormer.total_pages)
       console.log(moviesFormer)
-      
     }
     getMovies()   
   
   }, [pageNumber])
-
-  
 
   const requestOptions = {
     method: 'GET',
@@ -38,7 +35,7 @@ const SearchPage = () => {
   
   const moveToNextPage = () => {
     if(pageNumber === totalPages){
-      alert("hi")
+      alert("No more pages to show")
     }else{
        setPageNumber(pageNumber + 1)
     }
@@ -46,12 +43,11 @@ const SearchPage = () => {
 
 const moveToPrePage = () => {
   if(pageNumber === 1){
-    alert("hi")
+    alert("This is the first page")
   }else{
      setPageNumber(pageNumber - 1)
   }
 }
-
 
   return (
     <>

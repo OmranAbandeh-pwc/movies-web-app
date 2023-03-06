@@ -68,28 +68,28 @@ const Body = () => {
   return (
     <>
     <NavBar/>
-   { 
-   <div className="main-searchbar-container" style={{backgroundAttachment:"fixed",backgroundSize:"cover", backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)) , url(https://image.tmdb.org/t/p/w500/9Rq14Eyrf7Tu1xk0Pl7VcNbNh1n.jpg)`}}>
-        <div className="welcome-container">
-          
-            <h1>Welcome.</h1>
-            <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
+    <div className='main-body-container'>{ 
+      <div className="main-searchbar-container" style={{backgroundAttachment:"fixed",backgroundSize:"cover", backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)) , url(https://image.tmdb.org/t/p/w500/9Rq14Eyrf7Tu1xk0Pl7VcNbNh1n.jpg)`}}>
+            <div className="welcome-container">
+              
+                <h1>Welcome.</h1>
+                <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
+            </div>
+          <div className="search-bar">
+            <input type="text" placeholder="search here" onChange={(e) => setQuery(e.target.value)}/>
+            <Link to={`/searchpage/${query}`}><button >search</button></Link>
+          </div>
         </div>
-      <div className="search-bar">
-        <input type="text" placeholder="search here" onChange={(e) => setQuery(e.target.value)}/>
-        <Link to={`/searchpage/${query}`}><button >search</button></Link>
-      </div>
-    </div>
-         }
-         <div className='selector-main-container'><div className="trending">Trending</div><Selector dayFun={setDay} weekFun={setWeek} today={switcher} thisweek={!switcher}/></div>
-    <div className='movie-container'> 
-    
-       <div className='card-movie-container'>
+            }
+            <div className='selector-main-container'><div className="trending">Trending</div><Selector dayFun={setDay} weekFun={setWeek} today={switcher} thisweek={!switcher}/></div>
+        <div className='movie-container'> 
         
-        {isLoading ?<div>empty</div> :<Card items={movies} />}
-        
-       </div>
-       
+          <div className='card-movie-container'>
+            
+            {isLoading ?<div>empty</div> :<Card items={movies} />}
+            
+          </div>
+        </div>
     </div>
     <Footer/>
     </>

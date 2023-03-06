@@ -4,13 +4,34 @@ body{
     margin: auto;
 }
 nav{
-    height: 50px;
-    background-color: rgb(0, 48, 98);
+    height: 60px;
+    background-color: rgb(1, 35, 72);
     display: flex;
     color: white;
     position: relative;
     bottom: 0;
 }
+nav .nav-logo-container{
+    position: relative;
+    bottom: 15%;
+    left: 5%;
+    width: 140px;
+    height: 80px;
+}
+nav .nav-logo-container img{
+    height: 100%;
+    width: 100%;
+}
+.nav-ul-items{
+    margin: auto;
+}
+.nav-ul-items ul li{
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 15px;
+    display: inline-block;
+}
+
 .icon{
     position: relative;
     left: 80%;
