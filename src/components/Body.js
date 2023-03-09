@@ -76,7 +76,7 @@ const Body = () => {
                 <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
             </div>
           <div className="search-bar">
-            <input type="text" placeholder="search here" onChange={(e) => setQuery(e.target.value)}/>
+            <input type="text" placeholder="Search for a movie, TV Shows or series" onChange={(e) => setQuery(e.target.value)}/>
             <Link to={`/searchpage/${query}`}><button >search</button></Link>
           </div>
         </div>

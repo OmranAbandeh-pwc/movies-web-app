@@ -30,7 +30,6 @@ const MovieDetails = () => {
   const fetchApi = async () => {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=8d93590a0dee93ef264a94b3755603f8`, requestOptions)
     const data = await response.json()
-    console.log(data)
     return data;
   }
 
